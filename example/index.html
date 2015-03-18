@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/bower_components/requirejs/require.js"></script>
+    <script>
+        require.config({
+            "waitSeconds": 0,
+            "baseUrl": "/bower_components",
+            "packages": [{
+                "name": "jquery",
+                "location": "jquery/dist",
+                "main": "jquery"
+            },
+            {
+                "name": "picard",
+                "location": "../"
+            },
+            {
+                "name": "text",
+                "location": "text",
+                "main": "text"
+            }, {
+                "name": "comp1",
+                "location": "../example/comp1"
+            }, {
+                "name": "comp2",
+                "location": "../example/comp2"
+            }]
+        });
+
+        require([ "picard" ], function(Picard){
+            Picard().then(function(){
+                console.log("done.");
+            });
+        });
+    </script>
+</head>
+<body mount>
+    <div class="container-fluid">
+        <div class="row">
+            <comp1 data-username="John" class="col-sm-6">
+                <span>hello</span>
+            </comp1>
+            <comp2 class="col-sm-6">
+                <comp2>world</comp2>
+            </comp2>
+        </div>
+    </div>
+</body>
+</html>

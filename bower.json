@@ -1,0 +1,25 @@
+{
+  "name": "picard",
+  "version": "0.0.0",
+  "authors": [
+    "Eyal Arubas <eyalarubas@gmail.com>"
+  ],
+  "main": "lib/main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "when": "~3.7.2",
+    "text": "~2.0.14"
+  }
+}
